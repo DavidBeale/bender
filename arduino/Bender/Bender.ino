@@ -45,7 +45,7 @@ void setup()   {
   
   display.clearDisplay();   // clears the screen and buffer
   
-  display.drawBitmap(0, 0, splash, 80, 48, BLACK);
+  display.drawBitmap(4, 0, splash, 80, 48, BLACK);
   display.display();
 }
 

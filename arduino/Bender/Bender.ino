@@ -2,6 +2,7 @@
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
+#include "Splash.c"
 
 // D9 - VCC
 // D8 - GND
@@ -19,6 +20,7 @@ String message = "";
 
 int col = 0;
 int row = 0;
+  
 
 void setup()   {
 
@@ -42,6 +44,9 @@ void setup()   {
   Serial.begin(115200);    // opens serial port, sets data rate to 9600 bps
   
   display.clearDisplay();   // clears the screen and buffer
+  
+  display.drawBitmap(0, 0, splash, 80, 48, BLACK);
+  display.display();
 }
 
 
